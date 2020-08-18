@@ -49,7 +49,7 @@ app.use(cors())
 
 
 
-const whitelist = ['http://localhost:3000','https://shrouded-crag-81344.herokuapp.com' ]
+const whitelist = ['http://localhost:3000','https://safe-reaches-87855.herokuapp.com' ]
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
