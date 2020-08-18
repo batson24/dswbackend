@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParser())
 // secure apps by setting various HTTP headers
 // enable CORS - Cross Origin Resource Sharing
-app.use(cors())
+
 
 
 
@@ -62,6 +62,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
+app.use(cors())
 
 //user controller
 let userController= require('./controller/user.js')

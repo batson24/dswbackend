@@ -14,8 +14,10 @@ datematch.get('/', (req, res) => {
 
 // POST Route
 datematch.post('/', async (req, res) => {
+  console.log('this is req', req.body)
     Datematch.create(req.body, (error, createdDatematch) => {
       if (error) {
+        console.log(error)
         res.status(400).json({ error: error.message })
       }
       res.status(200).send(createdDatematch) 
