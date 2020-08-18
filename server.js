@@ -52,6 +52,7 @@ app.use(cookieParser())
 const whitelist = ['http://localhost:3000','https://safe-reaches-87855.herokuapp.com' ]
 const corsOptions = {
   origin: function (origin, callback) {
+      console.log(whitelist, origin)
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true)
     } else {
