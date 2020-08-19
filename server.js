@@ -53,7 +53,7 @@ const whitelist = ['http://localhost:3000','https://safe-reaches-87855.herokuapp
 const corsOptions = {
   origin: function (origin, callback) {
       console.log(whitelist, origin)
-    if (origin == false || whitelist.indexOf(origin) !== -1) {
+    if (origin === undefined || whitelist.indexOf(origin) !== -1) {
       callback(null, true)
     } else {
       callback(new Error('Not allowed by CORS'))
@@ -63,7 +63,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
-app.use(cors())
+
 
 //user controller
 let userController= require('./controller/user.js')
